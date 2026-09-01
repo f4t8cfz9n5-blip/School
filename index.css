@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f8f7fb;
+  color: #1a1a2e;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark body {
+  background-color: #1e1230;
+  color: #ede7f6;
+}
+
+/* Visible keyboard focus for accessibility */
+:focus-visible {
+  outline: 2px solid #5b2c87;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Thin scrollbar to match the document-like aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d8d2e6;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #3d2b5c;
+}
